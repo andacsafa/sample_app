@@ -3,6 +3,16 @@
 # The generated `.rspec` file contains `--require spec_helper` which will cause this
 # file to always be loaded, without a need to explicitly require it in any files.
 #
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'rspec/autorun'
+
+require 'capybara/rspec'
+require 'capybara/rails'
+
+
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
 # will add to the boot time of your test suite on EVERY test run, even for an
@@ -75,4 +85,9 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 =end
+
+  config.use_transactional_fixtures = true
+    config.infer_base_class_for_anonymous_controllers = false
+      config.order = "random"
+  config.include Capybara::DSL
 end
