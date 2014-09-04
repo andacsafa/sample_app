@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'bcrypt'
 
 group :development, :test do
     gem 'sqlite3'
