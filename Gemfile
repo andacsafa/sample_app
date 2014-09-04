@@ -5,6 +5,9 @@ gem 'rails'
 gem 'bootstrap-sass'
 gem 'sprockets'
 gem 'bcrypt'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 
 group :development, :test do
   gem 'sqlite3'
@@ -16,6 +19,7 @@ group :test do
   gem 'capybara'
 end
 
+gem 'faker'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
