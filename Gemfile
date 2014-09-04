@@ -7,13 +7,13 @@ gem 'sprockets'
 gem 'bcrypt'
 
 group :development, :test do
-    gem 'sqlite3'
-      gem 'rspec-rails'
+  gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 group :test do
-    gem 'selenium-webdriver'
-      gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'capybara'
 end
 
 gem 'sass-rails'
@@ -24,10 +24,10 @@ gem 'turbolinks'
 gem 'jbuilder'
 
 group :doc do
-    gem 'sdoc', require: false
+  gem 'sdoc', require: false
 end
 
 group :production do
-    gem 'pg'
-      gem 'rails_12factor'
+  gem 'pg'
+  gem 'rails_12factor'
 end
